@@ -1,0 +1,145 @@
+/*	NAVIGATION 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.nav {
+    .level_1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    a,
+    strong.active {
+        @include text-display-m;
+        text-decoration: none;
+        &:hover {
+            color: $black !important;
+        }
+    }
+}
+
+.section--header {
+    .nav .level_1 li {
+        a,
+        strong.active {
+            @include text-display-l;
+            display: block;
+            margin: 0;
+            padding: 0.5rem 0.625rem 0.75rem 0.625rem;
+            background: lighten($progeno-grey, 45%);
+            color: $progeno-grey;
+            height: 100%;
+        }
+        &.active strong {
+            background: lighten($progeno-grey, 35%);
+            color: $black;
+        }
+        &.project--freiham.active {
+            a,
+            strong.active {
+                @include slab-orange;
+            }
+        }
+        &.project--pep.active {
+            a,
+            strong.active {
+                @include slab-green;
+            }
+        }
+    }
+}
+
+.nav--main {
+    .level_1 {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            margin-right: $spacing-s;
+        }
+        a,
+        strong.active {
+            display: block;
+            font-weight: inherit;
+        }
+    }
+}
+
+.nav--projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    > h2 {
+        flex-basis: $col;
+        text-align: right;
+        margin: 0;
+        padding: 0.5rem 1.25rem 0.75rem 1.25rem;
+    }
+    .level_1 {
+        padding-left: 0.625rem;
+        li {
+            margin-right: $spacing-s;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.nav--secondary {
+    .level_1 {
+        padding-right: $spacing-m;
+        li {
+            margin-left: $spacing-s;
+        }
+        a.trail {
+            background: lighten($progeno-grey, 35%) !important;
+        }
+    }
+}
+
+.nav--sub {
+    ul {
+        flex-direction: column;
+    }
+    li {
+    }
+    .level_2 {
+        padding-left: $spacing-s;
+    }
+}
+
+.section--main {
+    .nav--sub {
+        margin-bottom: $spacing-l;
+        padding: $spacing-m;
+        margin: 0 -1.25rem 2.5rem -1.25rem;
+        ul {
+        }
+        li {
+        }
+    }
+}
+
+.section--header {
+    .nav--sub {
+        smargin: 0 $spacing-m;
+        background: lighten($progeno-grey, 35%);
+        ul {
+            flex-direction: row;
+            justify-content: flex-end;
+            margin: 0 $spacing-m;
+        }
+        a,
+        strong.active {
+            background: lighten($progeno-grey, 35%) !important;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}
+
+.nav--footer {
+    padding: 0 $spacing-m;
+    li {
+        margin-left: $spacing-s;
+    }
+}

@@ -1,0 +1,58 @@
+/*	MAIN 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.section--main {
+    .inside {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    #intro {
+        order: 1;
+        flex-basis: 100%;
+    }
+    .content {
+        order: 3;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+    }
+    .sidebar {
+        flex-basis: $col;
+        flex-shrink: 0;
+    }
+    .sidebar--left {
+        order: 2;
+    }
+    .sidebar--right {
+        order: 4;
+    }
+    #bottom {
+        order: 5;
+    }
+}
+
+#intro {
+    @include text-copy-l;
+    padding-top: 4rem;
+    padding-left: 16.25rem;
+    padding-bottom: 2rem;
+    padding-right: 1.25rem;
+    margin-bottom: $spacing-l;
+    sbackground: lighten($progeno-grey, 45%);
+    body.project--freiham & {
+        @include slab-orange;
+    }
+    body.project--pep & {
+        @include slab-green;
+    }
+    .ce_headline.first {
+        margin: 0;
+    }
+}
+
+.content,
+.sidebar,
+#bottom {
+    padding: $spacing-m;
+}

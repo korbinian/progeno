@@ -1,0 +1,23 @@
+/*	BRANDING 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.branding {
+    display: flex;
+    align-items: center;
+    padding: $spacing-xl $spacing-m $spacing-m $spacing-m;
+    &__logo {
+        max-width: 33.75rem;
+        max-height: 6.625rem;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__text {
+        @include visuallyhidden;
+    }
+    &__title {
+    }
+    &__tagline {
+    }
+}

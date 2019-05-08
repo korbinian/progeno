@@ -1,0 +1,33 @@
+/*	HEADER 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.section--header {
+    .inside {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .branding {
+        order: 1;
+        flex-basis: 100%;
+    }
+    .nav--projects {
+        order: 2;
+    }
+    .nav--secondary {
+        order: 3;
+    }
+    .nav--sub {
+        order: 4;
+        flex-basis: 100%;
+    }
+    .breadcrumbs {
+        order: 5;
+        flex-basis: 100%;
+    }
+}
+
+.project .section--header {
+    .nav--sub {
+        display: none;
+    }
+}

@@ -1,0 +1,21 @@
+/*	BREADCRUMBS 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.breadcrumbs {
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            &::after {
+                content: "/";
+                margin: 0 $spacing-s;
+            }
+            &.last {
+                &::after {
+                    content: "";
+                    display: none;
+                }
+            }
+        }
+    }
+}

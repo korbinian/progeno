@@ -1,0 +1,120 @@
+//	VARIABLES
+////////////////////////////////////////////////////////////////////////////////
+
+// colors
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$blue: rgb(0, 0, 255);
+
+$progeno-green: rgb(179, 219, 24);
+$progeno-orange: rgb(248, 156, 20);
+$progeno-grey: rgb(127, 127, 127);
+
+$color-text: $black;
+
+// page widths
+
+$page-width-s: 640;
+$page-width-m: 960;
+$page-width-l: 1200;
+
+$page-width: 77.5rem;
+
+$col: 15rem;
+
+// breakpoints
+
+$breakpoint-s: 720;
+$breakpoint-m: 960;
+$breakpoint-l: 1080;
+$breakpoint-xl: 1200;
+$bp-mobile-portrait: 540px;
+$bp-mobile-landscape: 840px;
+$bp-tablet-portrait: 1140px;
+$bp-tablet-landscape: 1440px;
+$bp-desktop-s: 1200px;
+$bp-desktop-m: 1800px;
+$bp-desktop-l: 2400px;
+$bp-desktop-xl: 3600px;
+
+// font stacks
+
+$font-stack-arial: arial, helvetica;
+$font-stack-ui: "Inter UI", sans-serif;
+$font-stack-ui-var: "Inter UI var", sans-serif;
+$font-stack-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-stack-roboto: "Roboto", Arial, Helvetica, sans-serif;
+$font-stack-exo2: "Exo 2", arial, helvetica;
+$font-stack-code: monospace;
+
+$font-stack-copy: $font-stack-roboto;
+$font-stack-display: $font-stack-roboto;
+
+// font sizes
+
+$font-size-s: 0.8125rem; // 13px
+$font-size-m: 1rem; // 16px
+$font-size-l: 1.275rem; // 22px
+$font-size-xl: 2.5rem; // 40px
+$font-size-xxl: 5rem; // 80px
+
+$font-size-min: 16;
+$font-size-max: 20;
+
+// line heights
+
+$line-height-m: 1.25;
+
+// typographic scale
+
+$scale: 1.25;
+
+// spacing
+
+$spacing-xs: 0.3125rem;
+$spacing-s: 0.625rem;
+$spacing-m: 1.25rem;
+$spacing-l: 2.5rem;
+$spacing-xl: 5rem;
+$spacing-xxl: 10rem;
+
+// font-weights
+
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$font-weight-100: 100;
+$font-weight-200: 200;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+$font-weight-800: 800;
+$font-weight-900: 900;
+
+// display sizes
+
+$iphone4-width: 320px;
+$iphone4-height: 480px;
+$iphone5-width: 320px;
+$iphone5-height: 568px;
+$iphone6-width: 375px;
+$iphone6-height: 667px;
+$iphone7-width: 375px;
+$iphone7-height: 667px;
+$iphone8-width: 375px;
+$iphone8-height: 667px;
+$iphone6p-width: 414px;
+$iphone6p-height: 736px;
+$iphone7p-width: 414px;
+$iphone7p-height: 736px;
+$iphone8p-width: 414px;
+$iphone8p-height: 736px;
+$iphoneX-width: 375px;
+$iphoneX-heigth: 812px;

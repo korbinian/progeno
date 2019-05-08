@@ -1,0 +1,14 @@
+/*	FOOTER 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.section--footer {
+    @include slab-green;
+    .inside {
+        display: flex;
+        flex-wrap: wrap;
+        padding: $spacing-m;
+        .nav--footer {
+            margin-left: auto;
+        }
+    }
+}

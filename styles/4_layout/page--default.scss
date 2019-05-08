@@ -1,0 +1,38 @@
+/*	DEFAULT PAGE LAYOUT 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.section--header,
+.section--main,
+.section--footer {
+    > .inside {
+        margin: 0 auto;
+        width: $page-width;
+        position: relative;
+        padding: 0 $spacing-m;
+    }
+}
+
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    .section--main {
+        flex: 1 1 0;
+    }
+}
+
+.cols {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.25rem;
+    .col {
+        flex-basis: $col;
+        padding: $spacing-m;
+    }
+    .col-2 {
+        flex-basis: $col * 2;
+    }
+    &.offset-1 {
+        padding-left: $col;
+    }
+}

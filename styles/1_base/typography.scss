@@ -1,0 +1,106 @@
+/*	TYPOGRAPHY 
+//////////////////////////////////////////////////////////////////////////////*/
+
+//	Responsive Font-Sizing
+//
+//  px  on root
+//  rem on everything else
+// Single variable font with static fallback
+// https://rsms.me/inter/var-test.html
+:root {
+    $map: (
+        320px: 12px,
+        1120px: 16px
+    );
+    @include poly-fluid-sizing("font-size", $map);
+    font-family: $font-stack-copy;
+    font-weight: $font-weight-normal;
+    color: $color-text;
+    line-height: $line-height-m;
+    @supports (font-variation-settings: normal) {
+        //font-family: $font-stack-ui-var;
+    }
+}
+
+code,
+pre {
+    font-family: $font-stack-code;
+}
+
+::-moz-selection {
+    color: $white;
+    background: $blue;
+}
+
+::selection {
+    color: $white;
+    background: $blue;
+}
+
+// Text Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+em,
+b {
+    font-weight: $font-weight-bold;
+}
+
+strong {
+    @include text-display-m;
+}
+
+// hyphenation
+p {
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-last: always;
+    hyphenate-limit-zone: 8%;
+}
+
+.text-display-xxl {
+    @include text-display-xxl;
+}
+
+h1,
+.text-display-xl {
+    @include text-display-xl;
+}
+
+h2,
+.text-display-l {
+    @include text-display-l;
+}
+
+h3,
+h4,
+h5,
+h6,
+.text-display-m {
+    @include text-display-m;
+}
+
+.sidebar {
+    h1,
+    .text-display-xl {
+        @include text-display-l;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .text-display-l,
+    .text-display-m {
+        @include text-display-m;
+    }
+}
+
+.intro {
+    @include text-copy-l;
+}

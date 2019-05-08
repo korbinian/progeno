@@ -1,0 +1,811 @@
+/*//////////////////////////////////////////////////////////////////////////////
+//
+//	Progeno Wohnungsgenossenschaft e.V.
+//  Author: Korbinian Polk / mail@korbinianpolk.eu
+//
+//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////
+//	1 BASE
+//////////////////////////////////////////////////////////////////////////////*/
+/*	GENERIC 
+//////////////////////////////////////////////////////////////////////////////*/
+html {
+  box-sizing: border-box;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section, figcaption, figure, main, details, menu {
+  display: block;
+}
+
+/*	TYPOGRAPHY 
+//////////////////////////////////////////////////////////////////////////////*/
+:root {
+  font-size: 12px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: black;
+  line-height: 1.25;
+}
+@media (min-width: 320px) {
+  :root {
+    font-size: calc(0.5vw + 10.4px);
+  }
+}
+@media (min-width: 1120px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+code,
+pre {
+  font-family: monospace;
+}
+
+::-moz-selection {
+  color: white;
+  background: blue;
+}
+
+::selection {
+  color: white;
+  background: blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+em,
+b {
+  font-weight: 700;
+}
+
+strong {
+  font-family: "Exo 2", arial, helvetica;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+strong a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, currentColor, currentColor 0.1rem, transparent 0.1rem);
+}
+strong a:hover {
+  color: black;
+  background-image: linear-gradient(to top, black, black 0.1rem, transparent 0.1rem);
+}
+
+p {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+
+.text-display-xxl {
+  font-family: "Exo 2", arial, helvetica;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+.text-display-xxl a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, currentColor, currentColor 0.5rem, transparent 0.5rem);
+}
+.text-display-xxl a:hover {
+  color: black;
+  background-image: linear-gradient(to top, black, black 0.5rem, transparent 0.5rem);
+}
+@media (max-width: 540px) {
+  .text-display-xxl {
+    font-size: 2.5rem;
+  }
+}
+
+h1,
+.text-display-xl {
+  font-family: "Exo 2", arial, helvetica;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+h1 a,
+.text-display-xl a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, currentColor, currentColor 0.25rem, transparent 0.25rem);
+}
+h1 a:hover,
+.text-display-xl a:hover {
+  color: black;
+  background-image: linear-gradient(to top, black, black 0.25rem, transparent 0.25rem);
+}
+@media (max-width: 540px) {
+  h1,
+  .text-display-xl {
+    font-size: 1.275rem;
+  }
+}
+
+h2,
+.text-display-l {
+  font-family: "Exo 2", arial, helvetica;
+  font-size: 1.275rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+h2 a,
+.text-display-l a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, currentColor, currentColor 0.15rem, transparent 0.15rem);
+}
+h2 a:hover,
+.text-display-l a:hover {
+  color: black;
+  background-image: linear-gradient(to top, black, black 0.15rem, transparent 0.15rem);
+}
+
+h3,
+h4,
+h5,
+h6,
+.text-display-m {
+  font-family: "Exo 2", arial, helvetica;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+.text-display-m a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, currentColor, currentColor 0.1rem, transparent 0.1rem);
+}
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+.text-display-m a:hover {
+  color: black;
+  background-image: linear-gradient(to top, black, black 0.1rem, transparent 0.1rem);
+}
+
+.sidebar h1,
+.sidebar .text-display-xl {
+  font-family: "Exo 2", arial, helvetica;
+  font-size: 1.275rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.sidebar h1 a,
+.sidebar .text-display-xl a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, currentColor, currentColor 0.15rem, transparent 0.15rem);
+}
+.sidebar h1 a:hover,
+.sidebar .text-display-xl a:hover {
+  color: black;
+  background-image: linear-gradient(to top, black, black 0.15rem, transparent 0.15rem);
+}
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5,
+.sidebar h6,
+.sidebar .text-display-l,
+.sidebar .text-display-m {
+  font-family: "Exo 2", arial, helvetica;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.sidebar h2 a,
+.sidebar h3 a,
+.sidebar h4 a,
+.sidebar h5 a,
+.sidebar h6 a,
+.sidebar .text-display-l a,
+.sidebar .text-display-m a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, currentColor, currentColor 0.1rem, transparent 0.1rem);
+}
+.sidebar h2 a:hover,
+.sidebar h3 a:hover,
+.sidebar h4 a:hover,
+.sidebar h5 a:hover,
+.sidebar h6 a:hover,
+.sidebar .text-display-l a:hover,
+.sidebar .text-display-m a:hover {
+  color: black;
+  background-image: linear-gradient(to top, black, black 0.1rem, transparent 0.1rem);
+}
+
+.intro {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.275rem;
+  font-weight: 400;
+}
+
+/*	SPACING 
+//////////////////////////////////////////////////////////////////////////////*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* > *:last-child {
+  margin-bottom: 0;
+}
+
+/*	FORMS 
+//////////////////////////////////////////////////////////////////////////////*/
+input,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*	TABLES 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	LISTS 
+//////////////////////////////////////////////////////////////////////////////*/
+nav ul {
+  list-style: none;
+}
+
+/*	LINKS 
+//////////////////////////////////////////////////////////////////////////////*/
+a {
+  color: inherit;
+}
+
+/*	MEDIA 
+//////////////////////////////////////////////////////////////////////////////*/
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/*	HELPERS 
+//////////////////////////////////////////////////////////////////////////////*/
+/* Debug Classes */
+.icon-grid {
+  position: fixed;
+  z-index: 99999;
+  bottom: 0.625rem;
+  left: 0.625rem;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  display: none;
+  background-image: url("../images/icons/icon--grid.svg");
+  background-size: 1rem 1rem;
+}
+@media (min-width: 1120px) {
+  .icon-grid {
+    display: block;
+  }
+}
+
+.overlay {
+  opacity: 0;
+}
+
+.has-debug_overlay .overlay {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+  opacity: 1;
+  margin: 0 auto;
+}
+@media (min-width: 1120px) {
+  .has-debug_overlay .overlay {
+    background: url("../assets/grid-1240px.svg") repeat-y;
+    max-width: 77.5rem;
+    background-size: 100%;
+  }
+}
+
+.icon-sections {
+  position: fixed;
+  z-index: 99999;
+  bottom: 0.625rem;
+  right: 0.625rem;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  display: none;
+  background-image: url("../images/icons/icon--sections.svg");
+  background-size: 1rem 1rem;
+}
+@media (min-width: 1120px) {
+  .icon-sections {
+    display: block;
+  }
+}
+
+.has-sections_overlay .module {
+  position: relative;
+  outline: 1px solid;
+}
+.has-sections_overlay .module:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  scontent: attr(class);
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.invisible {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+//	2 CONTENT ELEMENTS
+//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////
+//	3 FRONTEND MODULES
+//////////////////////////////////////////////////////////////////////////////*/
+/*	BRANDING 
+//////////////////////////////////////////////////////////////////////////////*/
+.branding {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 5rem 1.25rem 1.25rem 1.25rem;
+}
+.branding__logo {
+  max-width: 33.75rem;
+  max-height: 6.625rem;
+}
+.branding__logo img {
+  width: 100%;
+  height: 100%;
+}
+.branding__text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+}
+
+/*	NAVIGATION 
+//////////////////////////////////////////////////////////////////////////////*/
+.nav .level_1 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.nav a,
+.nav strong.active {
+  font-family: "Exo 2", arial, helvetica;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-decoration: none;
+}
+.nav a a,
+.nav strong.active a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, currentColor, currentColor 0.1rem, transparent 0.1rem);
+}
+.nav a a:hover,
+.nav strong.active a:hover {
+  color: black;
+  background-image: linear-gradient(to top, black, black 0.1rem, transparent 0.1rem);
+}
+.nav a:hover,
+.nav strong.active:hover {
+  color: black !important;
+}
+
+.section--header .nav .level_1 li a,
+.section--header .nav .level_1 li strong.active {
+  font-family: "Exo 2", arial, helvetica;
+  font-size: 1.275rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  display: block;
+  margin: 0;
+  padding: 0.5rem 0.625rem 0.75rem 0.625rem;
+  background: #f2f2f2;
+  color: #7f7f7f;
+  height: 100%;
+}
+.section--header .nav .level_1 li a a,
+.section--header .nav .level_1 li strong.active a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, currentColor, currentColor 0.15rem, transparent 0.15rem);
+}
+.section--header .nav .level_1 li a a:hover,
+.section--header .nav .level_1 li strong.active a:hover {
+  color: black;
+  background-image: linear-gradient(to top, black, black 0.15rem, transparent 0.15rem);
+}
+.section--header .nav .level_1 li.active strong {
+  background: #d8d8d8;
+  color: black;
+}
+.section--header .nav .level_1 li.project--freiham.active a,
+.section--header .nav .level_1 li.project--freiham.active strong.active {
+  background: #f89c14;
+  color: #573503;
+}
+.section--header .nav .level_1 li.project--pep.active a,
+.section--header .nav .level_1 li.project--pep.active strong.active {
+  background: #b3db18;
+  color: #303a06;
+}
+
+.nav--main .level_1 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.nav--main .level_1 li {
+  margin-right: 0.625rem;
+}
+.nav--main .level_1 a,
+.nav--main .level_1 strong.active {
+  display: block;
+  font-weight: inherit;
+}
+
+.nav--projects {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex: 1;
+      flex: 1;
+}
+.nav--projects > h2 {
+  -ms-flex-preferred-size: 15rem;
+      flex-basis: 15rem;
+  text-align: right;
+  margin: 0;
+  padding: 0.5rem 1.25rem 0.75rem 1.25rem;
+}
+.nav--projects .level_1 {
+  padding-left: 0.625rem;
+}
+.nav--projects .level_1 li {
+  margin-right: 0.625rem;
+}
+.nav--projects .level_1 li:last-of-type {
+  margin-right: 0;
+}
+
+.nav--secondary .level_1 {
+  padding-right: 1.25rem;
+}
+.nav--secondary .level_1 li {
+  margin-left: 0.625rem;
+}
+.nav--secondary .level_1 a.trail {
+  background: #d8d8d8 !important;
+}
+
+.nav--sub ul {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.nav--sub .level_2 {
+  padding-left: 0.625rem;
+}
+
+.section--main .nav--sub {
+  margin-bottom: 2.5rem;
+  padding: 1.25rem;
+  margin: 0 -1.25rem 2.5rem -1.25rem;
+}
+
+.section--header .nav--sub {
+  smargin: 0 1.25rem;
+  background: #d8d8d8;
+}
+.section--header .nav--sub ul {
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin: 0 1.25rem;
+}
+.section--header .nav--sub a,
+.section--header .nav--sub strong.active {
+  background: #d8d8d8 !important;
+}
+.section--header .nav--sub a:hover,
+.section--header .nav--sub strong.active:hover {
+  color: black;
+}
+
+.nav--footer {
+  padding: 0 1.25rem;
+}
+.nav--footer li {
+  margin-left: 0.625rem;
+}
+
+/*	SEARCHFORM 
+//////////////////////////////////////////////////////////////////////////////*/
+.searchform input,
+.searchform button {
+  border: none;
+  padding: 0;
+}
+.searchform .formbody {
+  display: -ms-flexbox;
+  display: flex;
+}
+.searchform .formbody .widget-text {
+  -ms-flex: 1;
+      flex: 1;
+}
+.searchform .formbody .widget-text input {
+  width: 100%;
+}
+
+/*	BREADCRUMBS 
+//////////////////////////////////////////////////////////////////////////////*/
+.breadcrumbs ul {
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+}
+.breadcrumbs ul li::after {
+  content: "/";
+  margin: 0 0.625rem;
+}
+.breadcrumbs ul li.last::after {
+  content: "";
+  display: none;
+}
+
+/*	ARTICLE 
+//////////////////////////////////////////////////////////////////////////////*/
+/*	META 
+//////////////////////////////////////////////////////////////////////////////*/
+.meta {
+  padding: 0 1.25rem;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+//	4 LAYOUT
+//////////////////////////////////////////////////////////////////////////////*/
+/*	DEFAULT PAGE LAYOUT 
+//////////////////////////////////////////////////////////////////////////////*/
+.section--header > .inside,
+.section--main > .inside,
+.section--footer > .inside {
+  margin: 0 auto;
+  width: 77.5rem;
+  position: relative;
+  padding: 0 1.25rem;
+}
+
+#wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+#wrapper .section--main {
+  -ms-flex: 1 1 0;
+      flex: 1 1 0;
+}
+
+.cols {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -1.25rem;
+}
+.cols .col {
+  -ms-flex-preferred-size: 15rem;
+      flex-basis: 15rem;
+  padding: 1.25rem;
+}
+.cols .col-2 {
+  -ms-flex-preferred-size: 30rem;
+      flex-basis: 30rem;
+}
+.cols.offset-1 {
+  padding-left: 15rem;
+}
+
+/*	HEADER 
+//////////////////////////////////////////////////////////////////////////////*/
+.section--header .inside {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.section--header .branding {
+  -ms-flex-order: 1;
+      order: 1;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+.section--header .nav--projects {
+  -ms-flex-order: 2;
+      order: 2;
+}
+.section--header .nav--secondary {
+  -ms-flex-order: 3;
+      order: 3;
+}
+.section--header .nav--sub {
+  -ms-flex-order: 4;
+      order: 4;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+.section--header .breadcrumbs {
+  -ms-flex-order: 5;
+      order: 5;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.project .section--header .nav--sub {
+  display: none;
+}
+
+/*	MAIN 
+//////////////////////////////////////////////////////////////////////////////*/
+.section--main .inside {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+}
+.section--main #intro {
+  -ms-flex-order: 1;
+      order: 1;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+.section--main .content {
+  -ms-flex-order: 3;
+      order: 3;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+}
+.section--main .sidebar {
+  -ms-flex-preferred-size: 15rem;
+      flex-basis: 15rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.section--main .sidebar--left {
+  -ms-flex-order: 2;
+      order: 2;
+}
+.section--main .sidebar--right {
+  -ms-flex-order: 4;
+      order: 4;
+}
+.section--main #bottom {
+  -ms-flex-order: 5;
+      order: 5;
+}
+
+#intro {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.275rem;
+  font-weight: 400;
+  padding-top: 4rem;
+  padding-left: 16.25rem;
+  padding-bottom: 2rem;
+  padding-right: 1.25rem;
+  margin-bottom: 2.5rem;
+  sbackground: #f2f2f2;
+}
+body.project--freiham #intro {
+  background: #f89c14;
+  color: #573503;
+}
+body.project--pep #intro {
+  background: #b3db18;
+  color: #303a06;
+}
+#intro .ce_headline.first {
+  margin: 0;
+}
+
+.content,
+.sidebar,
+#bottom {
+  padding: 1.25rem;
+}
+
+/*	FOOTER 
+//////////////////////////////////////////////////////////////////////////////*/
+.section--footer {
+  background: #b3db18;
+  color: #303a06;
+}
+.section--footer .inside {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1.25rem;
+}
+.section--footer .inside .nav--footer {
+  margin-left: auto;
+}
+
+/*	PRINT 
+//////////////////////////////////////////////////////////////////////////////*/
+* {
+  color: green;
+}

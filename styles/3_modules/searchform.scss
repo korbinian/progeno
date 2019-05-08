@@ -1,0 +1,22 @@
+/*	SEARCHFORM 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.searchform {
+    input,
+    button {
+        border: none;
+        padding: 0;
+    }
+    .formbody {
+        display: flex;
+
+        .widget-text {
+            flex: 1;
+            input {
+                width: 100%;
+            }
+        }
+        .widget-submit {
+        }
+    }
+}
